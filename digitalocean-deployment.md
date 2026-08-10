@@ -78,7 +78,7 @@ EOT
 # Create the frontend environment file
 cat <<EOT > client/.env
 # If you have a domain, use it here. Otherwise, use your Droplet's IP address
-VITE_API_URL=http://<your-droplet-ip>/api
+VITE_API_URL=http://164.92.196.233/api
 EOT
 ```
 
