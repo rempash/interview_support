@@ -1,0 +1,12 @@
+{
+  "name": "interview-support",
+  "version": "1.0.0",
+  "description": "Root package.json to run backend and frontend concurrently",
+  "scripts": {
+    "start": "concurrently \"npm run start:dev --prefix api\" \"npm run dev --prefix client\""
+  },
+  "devDependencies": {
+    "@types/multer": "^2.2.0",
+    "concurrently": "^8.2.2"
+  }
+}
