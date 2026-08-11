@@ -32,7 +32,7 @@ Because the $6 droplet only has 1GB of RAM, building the React and NestJS apps i
 1. Copy the IP address of your new Droplet from the DigitalOcean dashboard.
 2. SSH into your droplet from your local terminal:
    ```bash
-   ssh root@<your-droplet-ip>
+   ssh root@164.92.196.233
    ```
 3. Run the following commands to create a 2GB swap file:
    ```bash
@@ -127,3 +127,7 @@ Since DigitalOcean gives you a static IP address that doesn't change on reboot, 
 2. Create an **A Record** pointing `@` (or your subdomain) to your Droplet's IP address.
 3. Update your `client/.env` on the Droplet to use your domain: `VITE_API_URL=https://yourdomain.com/api`
 4. For free SSL (HTTPS), it is highly recommended to use **Nginx Proxy Manager** or **Traefik** in front of your containers, or simply route your domain through **Cloudflare** for instant, free SSL.
+
+docker-compose -f docker-compose.prod.yml down
+docker-compose -f docker-compose.prod.yml up -d --build --force-recreate
+
