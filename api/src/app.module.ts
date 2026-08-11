@@ -19,7 +19,7 @@ import { QuestionsModule } from './questions/questions.module';
       type: 'postgres',
       url: process.env.DATABASE_URL || 'postgresql://admin:password@localhost:5433/transcription_db',
       entities: [Transcription, User, Project, Technology],
-      synchronize: false,
+      synchronize: true,
     }),
     TranscriptionModule,
     ReviewModule,
