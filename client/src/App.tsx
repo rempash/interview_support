@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Routes, Route, useNavigate, Navigate, useLocation } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Login from './components/Login/Login';
 import ProjectManagement from './components/ProjectManagement/ProjectManagement';
 import UploadVideo from './components/UploadVideo/UploadVideo';
@@ -17,8 +17,6 @@ function App() {
   const [isProcessing, setIsProcessing] = useState(false);
   const [token, setToken] = useState<string | null>(localStorage.getItem('token'));
   const [user, setUser] = useState<any | null>(JSON.parse(localStorage.getItem('user') || 'null'));
-  const navigate = useNavigate();
-  const location = useLocation();
 
   const handleLogin = (newToken: string, loggedInUser: any) => {
     localStorage.setItem('token', newToken);
@@ -62,6 +60,7 @@ function App() {
                     }} 
                     onUploadError={() => setIsProcessing(false)}
                     isProcessing={isProcessing}
+                    token={token!}
                   />
                 )}
 

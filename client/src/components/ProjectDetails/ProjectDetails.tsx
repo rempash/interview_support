@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { ArrowLeft, Video, Loader2, UploadCloud, MessageSquare, RefreshCw, Plus, X } from 'lucide-react';
+import { ArrowLeft, Video, Loader2, UploadCloud, MessageSquare, RefreshCw, X } from 'lucide-react';
 import { questionsApi } from '../../api/services/QuestionsApi';
 import { technologiesApi, type Technology } from '../../api/services/TechnologiesApi';
 import '../ProjectManagement/ProjectManagement.css'; // Reuse table styles

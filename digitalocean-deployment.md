@@ -130,4 +130,5 @@ Since DigitalOcean gives you a static IP address that doesn't change on reboot, 
 
 docker-compose -f docker-compose.prod.yml down
 docker-compose -f docker-compose.prod.yml up -d --build --force-recreate
+docker-compose -f docker-compose.prod.yml logs -f
 

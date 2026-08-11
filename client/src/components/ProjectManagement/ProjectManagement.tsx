@@ -60,7 +60,7 @@ export default function ProjectManagement() {
     setShowForm(true);
   };
 
-  const openEditForm = (project: Project) => {
+  const openEditForm = (project: any) => {
     setEditingId(project.id);
     setFormName(project.name);
     setShowForm(true);

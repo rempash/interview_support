@@ -1,4 +1,4 @@
-import { useCallback, useState, useEffect } from 'react';
+import { useCallback, useState } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { useLocation } from 'react-router-dom';
 import { useMutation, useQuery } from '@tanstack/react-query';
