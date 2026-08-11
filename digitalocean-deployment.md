@@ -128,6 +128,8 @@ Since DigitalOcean gives you a static IP address that doesn't change on reboot, 
 3. Update your `client/.env` on the Droplet to use your domain: `VITE_API_URL=https://yourdomain.com/api`
 4. For free SSL (HTTPS), it is highly recommended to use **Nginx Proxy Manager** or **Traefik** in front of your containers, or simply route your domain through **Cloudflare** for instant, free SSL.
 
+
+ssh root@164.92.196.233
 docker-compose -f docker-compose.prod.yml down
 docker-compose -f docker-compose.prod.yml up -d --build --force-recreate
 docker-compose -f docker-compose.prod.yml logs -f
